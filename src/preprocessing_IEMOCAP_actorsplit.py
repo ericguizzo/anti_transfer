@@ -145,7 +145,6 @@ def main():
     print ('Setting up preprocessing...')
     print('')
     sounds_list = get_sounds_list(INPUT_IEMOCAP_FOLDER)  #get list of all soundfile paths
-    print (sounds_list)
     #change this to have only 4 labels
     filtered_list = filter_labels(sounds_list)  #filter only sounds of certain labels
 
