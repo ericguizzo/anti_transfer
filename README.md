@@ -45,7 +45,7 @@ python3 preprocessing_LIBRISPEECH.py
 python3 preprocessing_NSYNTH.py
 ```
 
-##PRE-TRAIN FEATURE DEEP EXTRACTORS
+## PRE-TRAIN FEATURE DEEP EXTRACTORS
 Separately run the following scripts to pre-train the VGG networks used to compute the deep feature losses:
 ```bash
 python3 pretrain_vgg_iemocap.py
