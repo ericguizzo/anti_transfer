@@ -85,7 +85,7 @@ run experiments_manager [20,21,22,23] 1
 The results are automatically saved in the ../results/experiment_*ID directory. These items are saved for every experiment:
 * description.txt file containing a brief description of the experiment configuration
 * models folder containing all saved weights of the models
-* results folder containing the individial resultso of each experiment instance (saved as numpy dictionaries), a list of all used parameters for each instance (in the results/parameters folder) and an immediately-readable .xls spreadsheet that shows the most important result values of each experiment instance.
+* results folder containing the individial results of each experiment instance (saved as numpy dictionaries), a list of all used parameters for each instance (in the results/parameters folder) and an immediately-readable .xls spreadsheet that shows the most important result values of each experiment instance.
 
 Example:
 <p align="center">
