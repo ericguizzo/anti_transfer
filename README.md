@@ -19,7 +19,7 @@ We used these exact packages versions:
 * xlswriter 1.1.8
 * configparser 2.19
 
-To install everything at one please run
+To install everything at one please run:
 
 ```bash
 pip install -r requirements.txt
@@ -88,7 +88,7 @@ To run these experiments use the experiments_manager.py script inside the ipytho
 
 example:
 ```python
-run experiments_manager [20,21,22,23] 1
+run experiments_manager [20,21,22,23] 0
 ```
 
 The results are automatically saved in the ../results/experiment_*ID directory. These items are saved for every experiment:
