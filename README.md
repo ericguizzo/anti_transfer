@@ -4,6 +4,7 @@ Running this code will produce the results mentioned in the paper, using the sam
 ## INSTALL DEPENDENCIES
 We used these exact packages versions:
 * python 3.5
+* ipython 7.1.1
 * numpy 1.15.4
 * scipy 1.4.1
 * librosa 0.6.3
@@ -69,7 +70,7 @@ When all pre-trainings are complete, run the actual trainings to obtain the resu
 * In ID 10-17  weight-initialization, but no anti-transfer is applied. We compute 3 times each configuration to look at random fluctuations.
 * In ID 20-27 we apply anti-transfer learning (and no weight initialization). Each configuration is tested computing the anti-transfer loss in each convolution of the 13 convolution layers of the VGG16 networks.
 
-To run these experiments use the experiments_manager.py script, applying the following positional parameters:
+To run these experiments use the experiments_manager.py script inside the ipython environment, applying the following positional parameters:
 1. IDs of experiments to run (python list)
 2. GPU ID (int)
 3. first instance to compute (OPTIONAL, int)
@@ -80,12 +81,11 @@ example:
 run experiments_manager [20,21,22,23] 1
 ```
 
+The results are automatically saved in an immediately-readable .xls spreadsheet in the ../results/experiment_*ID/results directory.
+
+![alt text](../bin/example_table)
 
 
-
-
-
-We recommend to use the ipython environment at this stage
 
 
 ## GENERATE PLOTS
