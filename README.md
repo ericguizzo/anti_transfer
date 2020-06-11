@@ -1,16 +1,23 @@
 This repository supports the paper "Blissful Ignorance: Anti-Transfer Learning for Task Invariance" submitted for NeurIPS2020.
 Running this code will produce the results mentioned in the paper, using the same configuration as described in the paper.
 
-Code is based on Python 3.5
-
-
 ## INSTALL DEPENDENCIES
-```bash
-pip3 install numpy scipy librosa configparser matplotlib  torch torchvision essentia pandas soundfile sklearn xlswriter
-```
+We used these exact packages versions to produce our results:
+* python 3.5
+* numpy 1.15.4
+* scipy 1.4.1
+* librosa 0.6.3
+* matplotlib 3.0..3
+* torch 1.4.0
+* torchvision 0.2.2.post3
+* essentia 2.1b5.dev532
+* pandas 0.24.2
+* soundfile 0.9.0.post1
+* scikit-learn 0.20.3
+* xlswriter 1.1.8
+* configparser 2.19
 
 ## PREPARE DATA
-
 ### Iemocap
 * Download dataset: https://sail.usc.edu/iemocap/
 * Open the config/config.ini file and put the dataset path on [preprocessing]-input_iemocap_folder
@@ -46,7 +53,7 @@ python3 preprocessing_NSYNTH.py
 ```
 
 ## PRE-TRAIN FEATURE DEEP EXTRACTORS
-Separately run the following scripts to pre-train the VGG networks used to compute the deep feature losses:
+When the preprocessing stage is finished, separately run the following scripts to pre-train the features extractors. The pre-trained convolution part of these VGG networks will be used to compute the deep feature losses in the actual trainings:
 ```bash
 python3 pretrain_vgg_iemocap.py
 python3 pretrain_vgg_goodsounds.py
@@ -54,6 +61,10 @@ python3 pretrain_vgg_librispeech.py
 python3 pretrain_vgg_nsynth.py
 ```
 Depending on the GPU, it may be necessary to modify the batch_size variable in these scripts.
+
+## TRAIN MODELS
+When all pre-trainings terminate, run the actual trainings, to obtain the results exposed in the original paper.
+
 
 ## GENERATE PLOTS
 Run the following bash scripts to produce the plots included in the paper.

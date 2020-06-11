@@ -3,9 +3,9 @@ import subprocess
 
 
 #DEFINE PARAMETERS
-num_experiments_to_run = [3]
-begin = 3
-end = 26
+num_experiments_to_run = [1]
+begin = 1
+end = 20
 gpu_ID = 0
 
 
@@ -13,11 +13,11 @@ gpu_ID = 0
 #                    'patience=10', 'choose_optimizer="adam"', 'batch_size=10']
 
 global_parameters = ['num_epochs=50', 'learning_rate=0.00005', 'early_stopping=True',
-                    'patience=5', 'choose_optimizer="adam"', 'batch_size=4']
+                    'patience=5', 'choose_optimizer="adam"', 'batch_size=13']
 
-experiments_to_run_folder = 'experiments_antitransfer_finals_multipleLayers'
+experiments_to_run_folder = 'experiments_antitransfer'
 
-xval_script_parameters = ['experiment_folder="../../antitransfer/final_no_xval_MULTIPLE3"',
+xval_script_parameters = ['experiment_folder="../results"',
                           'debug_mode=False',
                           'overwrite_results=False',
                           'num_folds=1']
