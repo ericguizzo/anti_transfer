@@ -88,7 +88,7 @@ The results are automatically saved in the ../results/experiment_*ID directory. 
 
 Example:
 <p align="center">
-<img src="bin/example_xlsd.png" width="400">
+<img src="bin/example_xls.png" width="400">
 </p>
 
 In the 2 "comment" columns the main parameters of an experiment instance are shown. Best loss/accuracy are highlighted in green for every column.
