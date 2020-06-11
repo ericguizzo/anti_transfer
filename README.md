@@ -85,7 +85,7 @@ The results are automatically saved in an immediately-readable .xls spreadsheet 
 
 Example:
 <p align="center">
-<img src="bin/example_xld.png" width="400">
+<img src="bin/example_xls.png" width="400">
 </p>
 
 
