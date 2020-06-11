@@ -1,5 +1,6 @@
-This repository supports the paper "Blissful Ignorance: Anti-Transfer Learning for Task Invariance" submitted for NeurIPS2020.
-Running this code will produce the results mentioned in the paper, using the same configuration as described in the paper.
+# Blissful Ignorance: Anti-Transfer Learning for Task Invariance
+This repository supports the above paper submitted for NeurIPS2020.
+Running this code will produce the results mentioned in the paper, using the same configuration described in the paper.
 
 ## INSTALL DEPENDENCIES
 We used these exact packages versions:
