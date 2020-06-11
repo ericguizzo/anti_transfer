@@ -2,7 +2,7 @@ This repository supports the paper "Blissful Ignorance: Anti-Transfer Learning f
 Running this code will produce the results mentioned in the paper, using the same configuration as described in the paper.
 
 ## INSTALL DEPENDENCIES
-We used these exact packages versions to produce our results:
+We used these exact packages versions:
 * python 3.5
 * numpy 1.15.4
 * scipy 1.4.1
@@ -52,14 +52,15 @@ python3 preprocessing_LIBRISPEECH.py
 python3 preprocessing_NSYNTH.py
 ```
 
-## PRE-TRAIN FEATURE DEEP EXTRACTORS
-When the preprocessing stage is finished, separately run the following scripts to pre-train the features extractors. The pre-trained convolution part of these VGG networks will be used to compute the deep feature losses in the actual trainings:
+## PRE-TRAIN DEEP FEATURE EXTRACTORS
+When the preprocessing stage is finished, separately run the following scripts to pre-train the feature extractors:
 ```bash
 python3 pretrain_vgg_iemocap.py
 python3 pretrain_vgg_goodsounds.py
 python3 pretrain_vgg_librispeech.py
 python3 pretrain_vgg_nsynth.py
 ```
+The pre-trained convolution part of these VGG networks will be used to compute the deep feature losses in the actual trainings.
 Depending on the GPU, it may be necessary to modify the batch_size variable in these scripts.
 
 ## TRAIN MODELS
