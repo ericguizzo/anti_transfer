@@ -9,9 +9,9 @@ pip3 install numpy scipy librosa configparser matplotlib  torch torchvision esse
 
 ## PREPARE DATA
 
-# Iemocap
+### Iemocap
 
-# GENERATE PLOTS
+## GENERATE PLOTS
 Run the following bash scripts to produce the plots included in the paper.
 Results values are hard-coded in the scripts.
 ```bash
