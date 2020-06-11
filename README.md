@@ -18,6 +18,15 @@ python3 preprocessing_IEMOCAP_randsplit.py
 python3 preprocessing_IEMOCAP_actorsplit.py
 python3 preprocessing_IEMOCAP_randsplit_SPEAKER.py
 ```
+### Good-Sounds
+* Download dataset: https://www.upf.edu/web/mtg/good-sounds
+* Open the config/config.ini file and put the dataset path on [preprocessing]-input_good-sounds_folder
+* Run the following scripts to pre-process the dataset both with random and instrument-wise train/val/test split for sound goodness estimation and with random split for instrument recognition.
+```bash
+python3 preprocessing_GOODSOUNDS_randsplit.py
+python3 preprocessing_GOODSOUNDS_actorsplit.py
+python3 preprocessing_GOODSOUNDS_randsplit_INSTRUMENT.py
+```
 ### Librispeech
 * Follow these instructions to download and prepare the dataset: https://github.com/bepierre/SpeechVGG. (We used the 100 hours version)
 * Open the config/config.ini file and put the dataset path on [preprocessing]-input_librispeech_folder
@@ -33,15 +42,7 @@ python3 preprocessing_LIBRISPEECH.py
 ```bash
 python3 preprocessing_NSYNTH.py
 ```
-### Good-Sounds
-* Download dataset: https://www.upf.edu/web/mtg/good-sounds
-* Open the config/config.ini file and put the dataset path on [preprocessing]-input_good-sounds_folder
-* Run the following scripts to pre-process the dataset both with random and instrument-wise train/val/test split for sound goodness estimation and with random split for instrument recognition.
-```bash
-python3 preprocessing_GOODSOUNDS_randsplit.py
-python3 preprocessing_GOODSOUNDS_actorsplit.py
-python3 preprocessing_GOODSOUNDS_randsplit_INSTRUMENT.py
-```
+
 
 
 ## GENERATE PLOTS
