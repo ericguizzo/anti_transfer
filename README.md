@@ -19,7 +19,7 @@ We used these exact packages versions:
 
 ## PREPARE DATA
 ### Iemocap
-* Download dataset: https://sail.usc.edu/iemocap/
+* Follow these instructions to download the dataset: https://sail.usc.edu/iemocap/
 * Open the config/config.ini file and put the dataset path on [preprocessing]-input_iemocap_folder
 * Run the following scripts to pre-process the dataset both with random and speaker-wise train/val/test split for emotion recognition and with random split for speaker recognition.
 ```bash
@@ -61,15 +61,22 @@ python3 pretrain_vgg_librispeech.py
 python3 pretrain_vgg_nsynth.py
 ```
 The pre-trained convolution part of these VGG networks will be used to compute the deep feature losses in the actual trainings.
-Depending on the GPU, it may be necessary to modify the batch_size variable in these scripts.
+Depending on the used GPU, it may be necessary to modify the batch_size variable in these scripts.
 
 ## TRAIN MODELS
-When all pre-trainings terminate, run the actual trainings, to obtain the results exposed in the original paper.
+When all pre-trainings finished, run the actual trainings to obtain the results exposed in the original paper. The experiments_antitransfer folder contains all configuration files for the experiments to run. The file naming describes fo each configuration: ID_training-dataset_split-type_pretraining-dataset
+* ID 1-4 are the baseline. Here no anti-transfer nor weight initialization is applied. We compute 20 times all baseline experiments to look at random fluctuations.
+* In ID 10-17  weight-initialization, but no anti-transfer is applied. We compute 3 times each configuration to look at random fluctuations.
+* In ID 20-27 we apply anti-transfer learning (and no weight initialization). Each configuration is separately tested computing the anti-transfer loss in each convolution layer (13) of the VGG16 networks.
+
+
+
+We recommend to use the ipython environment at this stage
 
 
 ## GENERATE PLOTS
-Run the following bash scripts to produce the plots included in the paper.
-Results values are hard-coded in the scripts.
+Run the following bash scripts to produce the plots included in the paper
+(our result values are hard-coded in the scripts).
 ```bash
 python3 plot_accuracy_boost.py
 python3 plot_loss_epochs.py
