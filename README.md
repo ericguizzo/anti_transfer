@@ -1,5 +1,7 @@
 This repository supports the paper "Blissful Ignorance: Anti-Transfer Learning for Task Invariance" submitted for NeurIPS2020.
-Running this code will produce the results mentioned in the paper. Code is based on Python 3.5
+Running this code will produce the results mentioned in the paper, using the same configuration as described in the paper.
+
+Code is based on Python 3.5
 
 
 ## INSTALL DEPENDENCIES
@@ -43,7 +45,15 @@ python3 preprocessing_LIBRISPEECH.py
 python3 preprocessing_NSYNTH.py
 ```
 
-
+##PRE-TRAIN FEATURE DEEP EXTRACTORS
+Separately run the following scripts to pre-train the VGG networks used to compute the deep feature losses:
+```bash
+python3 pretrain_vgg_iemocap.py
+python3 pretrain_vgg_goodsounds.py
+python3 pretrain_vgg_librispeech.py
+python3 pretrain_vgg_nsynth.py
+```
+Depending on the GPU, it may be necessary to modify the batch_size variable in these scripts.
 
 ## GENERATE PLOTS
 Run the following bash scripts to produce the plots included in the paper.
