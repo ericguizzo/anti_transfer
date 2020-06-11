@@ -19,6 +19,11 @@ We used these exact packages versions:
 * xlswriter 1.1.8
 * configparser 2.19
 
+To install everything at one please run
+
+```bash
+pip install -r requirements.txt
+```
 ## PREPARE DATA
 ### Iemocap
 * Follow these instructions to download the dataset: https://sail.usc.edu/iemocap/
