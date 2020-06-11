@@ -2,7 +2,7 @@
 This repository supports the above paper submitted for NeurIPS2020.
 Running this code will produce the results mentioned in the paper, using the same configuration described in the original work.
 
-## INSTALL DEPENDENCIES
+## REQUIREMENTS
 We used these exact packages versions:
 * python 3.5
 * ipython 7.1.1
