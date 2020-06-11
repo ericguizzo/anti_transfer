@@ -1,6 +1,6 @@
 # Blissful Ignorance: Anti-Transfer Learning for Task Invariance
 This repository supports the above paper submitted for NeurIPS2020.
-This code produces the results mentioned in the paper, using the same configuration described in the original work. 
+This code produces the results mentioned in the paper, using the same configuration described in the original work.
 
 ## REQUIREMENTS
 We used these exact packages versions:
@@ -63,7 +63,7 @@ python3 pretrain_vgg_librispeech.py
 python3 pretrain_vgg_nsynth.py
 ```
 The pre-trained convolution part of these VGG networks will be used to compute the deep feature losses in the actual trainings.
-Depending on the used GPU, it may be necessary to modify the batch_size variable in these scripts.
+Depending on the used GPU, it may be necessary to modify the batch_size variable inside these scripts.
 
 ## TRAIN MODELS
 When all pre-trainings are complete, run the actual trainings to obtain the results exposed in the original paper. The experiments_antitransfer folder contains all configuration files for the experiments to run. Each configuration file contains several single training instances. The file naming describes each configuration: ID_training-dataset_split-type_pretraining-dataset
