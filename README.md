@@ -83,7 +83,7 @@ run experiments_manager [20,21,22,23] 1
 
 The results are automatically saved in an immediately-readable .xls spreadsheet in the ../results/experiment_*ID/results directory.
 
-![alt text](../bin/example_table)
+![alt text](../bin/example_xls)
 
 
 
