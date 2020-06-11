@@ -64,10 +64,24 @@ The pre-trained convolution part of these VGG networks will be used to compute t
 Depending on the used GPU, it may be necessary to modify the batch_size variable in these scripts.
 
 ## TRAIN MODELS
-When all pre-trainings are complete, run the actual trainings to obtain the results exposed in the original paper. The experiments_antitransfer folder contains all configuration files for the experiments to run. The file naming describes each configuration: ID-training-dataset_split-type_pretraining-dataset
+When all pre-trainings are complete, run the actual trainings to obtain the results exposed in the original paper. The experiments_antitransfer folder contains all configuration files for the experiments to run. Each configuration file contains several single training instances. The file naming describes each configuration: ID_training-dataset_split-type_pretraining-dataset
 * ID 1-4 are the baseline. Here no anti-transfer nor weight initialization is applied. We compute 20 times all baseline experiments to look at random fluctuations.
 * In ID 10-17  weight-initialization, but no anti-transfer is applied. We compute 3 times each configuration to look at random fluctuations.
-* In ID 20-27 we apply anti-transfer learning (and no weight initialization). Each configuration is separately tested computing the anti-transfer loss in each convolution layer (13) of the VGG16 networks.
+* In ID 20-27 we apply anti-transfer learning (and no weight initialization). Each configuration is tested computing the anti-transfer loss in each convolution of the 13 convolution layers of the VGG16 networks.
+
+To run these experiments use the experiments_manager.py script, applying the following positional parameters:
+1. IDs of experiments to run (python list)
+2. GPU ID (int)
+3. first instance to compute (OPTIONAL, int)
+4. last instance to compute (OPTIONAL, int)
+
+example:
+```python
+run experiments_manager [20,21,22,23] 1
+```
+
+
+
 
 
 
