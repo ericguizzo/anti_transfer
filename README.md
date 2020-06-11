@@ -87,7 +87,7 @@ The results are automatically saved in the ../results/experiment_*ID directory. 
 * models folder containing all saved weights of the models
 * results folder containing the individial results of each experiment instance (saved as numpy dictionaries), a list of all used parameters for each instance (in the results/parameters folder) and an immediately-readable .xls spreadsheet that shows the most important result values of each experiment instance.
 
-Example:
+Example spreadsheet (Emotion recognition on speaker-wise split (IEMOCAP) with pre-training on speaker recognition (IEMOCAP)):
 <p align="center">
 <img src="bin/example_xls1.png" width="400">
 </p>
