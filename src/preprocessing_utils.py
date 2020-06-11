@@ -10,7 +10,9 @@ import loadconfig
 from scipy.signal import stft
 import utility_functions as uf
 import soundfile as sf
-
+'''
+Utility functions for audio-based data pre-processing
+'''
 config = loadconfig.load()
 cfg = configparser.ConfigParser()
 cfg.read(config)

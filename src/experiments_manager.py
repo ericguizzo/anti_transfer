@@ -1,6 +1,8 @@
 import os, sys
 import subprocess
-
+'''
+Launch selected experiment configuration in GPUs
+'''
 
 #DEFINE PARAMETERS
 num_experiments_to_run = [1]

@@ -9,7 +9,9 @@ import numpy as np
 from torchvision import models
 import configparser
 import loadconfig
-
+'''
+Computation of the anti-transfer loss
+'''
 config = loadconfig.load()
 cfg = configparser.ConfigParser()
 cfg.read(config)

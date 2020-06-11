@@ -2,7 +2,10 @@ from __future__ import print_function
 import numpy as np
 import sys, os
 import xlsxwriter
-
+'''
+Automatically compile an xls spreadsheet from training results contained in a
+npy dict
+'''
 try:
     in_folder = sys.argv[1]
     out_name = sys.argv[2]

@@ -12,7 +12,9 @@ import matplotlib.pyplot as plt
 import preprocessing_utils as pu
 import define_models_torch
 import time
-
+'''
+Feature extractor pre-training for anti-transfer loss computation
+'''
 
 config = loadconfig.load()
 cfg = configparser.ConfigParser()

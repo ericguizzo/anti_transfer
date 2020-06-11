@@ -1,5 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
+'''
+Plot the loss trand through training epochs (as in the original paper)
+'''
 
 path = '../bin/results_iemocap_randsplit_spectrum_fast_exp208_run5.npy'
 

@@ -2,6 +2,10 @@ import random
 import numpy as np
 from matplotlib import pyplot
 import matplotlib.pyplot as plt
+'''
+Plot the overall average test accuracy improvement in various test cases
+(as in the original paper)
+'''
 
 overall_train = ((75.5-69) + (74.5-67.8) + (93.9-91.8) + (36.4-42.2)) / 4
 

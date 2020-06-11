@@ -1,7 +1,7 @@
 import torch
 from torchvision import models
 import define_models_torch as mod
-import feature_loss_culo as fl
+import feature_loss as fl
 from torch import nn
 import numpy as np
 import time

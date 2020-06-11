@@ -13,7 +13,9 @@ from multiscale_convlayer2 import MultiscaleConv2d
 import sys, os
 import configparser
 import loadconfig
-
+'''
+Define models to be used by the training_torch script
+'''
 
 config = loadconfig.load()
 cfg = configparser.ConfigParser()

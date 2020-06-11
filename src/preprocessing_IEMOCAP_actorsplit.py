@@ -5,7 +5,10 @@ import numpy as np
 import os, sys
 import configparser
 import loadconfig
-
+'''
+Preprocessing script.
+Outputs numpy dicts containing preprocessed predictors and target
+'''
 
 config = loadconfig.load()
 cfg = configparser.ConfigParser()

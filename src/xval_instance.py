@@ -6,7 +6,11 @@ import time
 import shutil
 import loadconfig
 import configparser
-
+'''
+Crossvalidation instance script.
+Automatically manage train/val/test split, call training_torch.py in a subprocess
+for every fold, organize all results in a ditionary
+'''
 config = loadconfig.load()
 cfg = configparser.ConfigParser()
 cfg.read(config)

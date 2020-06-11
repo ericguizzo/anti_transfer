@@ -1,6 +1,10 @@
 #from __future__ import print_function
 import sys, os
 import time
+'''
+Actually neural network training script.
+Based on Pytorch backend.
+'''
 #look at sys argv: if in crossvalidation model i/o matrices and new model filename
 #are given from crossvalidation script, otherwise are normally taken from config.ini
 try:
@@ -147,7 +151,7 @@ else:
 
 #path for saving best val loss and best val acc models
 BVL_model_path = SAVE_MODEL
-at_dataset = 'culo'
+at_dataset = 'no'
 
 #OVERWRITE DEFAULT PARAMETERS IF IN XVAL MODE
 try:

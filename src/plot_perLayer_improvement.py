@@ -2,7 +2,9 @@ import random
 import numpy as np
 from matplotlib import pyplot
 import matplotlib.pyplot as plt
-
+'''
+Plot the mean improvement of anti-transfer for each conv layer (as in the original paper)
+'''
 train = [0.6996790754683,
 0.74166822186927,
 0.756309865900383,

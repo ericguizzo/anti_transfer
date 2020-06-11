@@ -11,6 +11,10 @@ import loadconfig
 #import essentia.standard as ess
 import configparser
 import matplotlib.pyplot as plt
+'''
+Apply random-ish relected audio transformations to augment sound datasets.
+'''
+
 
 config = loadconfig.load()
 cfg = configparser.ConfigParser()

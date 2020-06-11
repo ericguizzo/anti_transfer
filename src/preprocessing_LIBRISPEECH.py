@@ -8,6 +8,10 @@ import h5py
 import configparser
 import loadconfig
 #functions taken from https://github.com/bepierre/SpeechVGG
+'''
+Preprocessing script.
+Outputs numpy dicts containing preprocessed predictors and target
+'''
 
 config = loadconfig.load()
 cfg = configparser.ConfigParser()

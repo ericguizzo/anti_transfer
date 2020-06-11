@@ -3,7 +3,7 @@
 configuration file to be loaded for the whole project
 '''
 
-configuration_file = "../config/configGRAM.ini"
+configuration_file = "../config/configANTITRANSFER.ini"
 
 def load(conf = configuration_file):
     return conf
