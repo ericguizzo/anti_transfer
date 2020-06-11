@@ -5,7 +5,16 @@ import preprocessing_utils
 import soundfile as sf
 from scipy.signal import stft
 import h5py
+import configparser
+import loadconfig
 
+
+config = loadconfig.load()
+cfg = configparser.ConfigParser()
+cfg.read(config)
+
+#get values from config file
+input_folder = cfg.get('preprocessing', 'input_librispeech_folder')
 
 
 preprocessing_ID = '4sec_inv'
@@ -15,7 +24,7 @@ def parse_args():
 
     parser.add_argument(
         '-data', '--data',
-        type=str, default='../dataset/LibriSpeech',
+        type=str, default=input_folder,
         help='dataset to load'
     )
 

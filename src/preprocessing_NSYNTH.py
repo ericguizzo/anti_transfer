@@ -7,7 +7,16 @@ import utility_functions as uf
 import random
 import sys
 import pandas
+import configparser
+import loadconfig
 
+
+config = loadconfig.load()
+cfg = configparser.ConfigParser()
+cfg.read(config)
+
+#get values from config file
+input_path = cfg.get('preprocessing', 'input_nsynth_folder')
 
 preprocessing_ID = 'reduced'
 max_items = 280000 / 5
