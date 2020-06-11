@@ -96,7 +96,7 @@ In the two "comment" columns the main parameters of an experiment instance are s
 
 
 ## GENERATE PLOTS
-Run the following bash scripts to produce the plots included in the paper
+Run the following scripts to produce the plots included in the paper
 (our result values are hard-coded in the scripts).
 ```bash
 python3 plot_accuracy_boost.py
