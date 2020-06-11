@@ -7,7 +7,7 @@ from scipy.signal import stft
 import h5py
 import configparser
 import loadconfig
-
+#functions taken from https://github.com/bepierre/SpeechVGG
 
 config = loadconfig.load()
 cfg = configparser.ConfigParser()

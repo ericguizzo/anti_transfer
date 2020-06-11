@@ -9,9 +9,6 @@ end = 20
 gpu_ID = 0
 
 
-#global_parameters = ['num_epochs=500', 'learning_rate=0.00005', 'early_stopping=True',
-#                    'patience=10', 'choose_optimizer="adam"', 'batch_size=10']
-
 global_parameters = ['num_epochs=50', 'learning_rate=0.00005', 'early_stopping=True',
                     'patience=5', 'choose_optimizer="adam"', 'batch_size=13']
 

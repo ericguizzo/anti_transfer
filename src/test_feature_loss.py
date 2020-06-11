@@ -128,12 +128,8 @@ print ('    pairwise_cos: ' + str(pairwise_cos_stoc))
 print ('    computation time: ' + str(pairwise_cos_stoc_time))
 '''
 
-print ('HERE WE ARE:')
 start = time.perf_counter()
 multiple_layers_loss = fl.feature_loss(input, emo_model, f_extractor, aggregation= 'gram', distance='cos_squared', layer=[2, 5, 7, 10, 12, 14, 17, 19, 21, 24, 26, 28])
 multiple_time = time.perf_counter() - start
 print ('    multiple_cos: ' + str(multiple_layers_loss))
 print ('    computation time: ' + str(multiple_time))
-
-
-print ('testing aggregation magnitude')

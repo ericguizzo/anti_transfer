@@ -21,7 +21,6 @@ num_cnn_layers = cfg.getint('pretraining', 'num_cnn_layers')
 cos = nn.CosineSimilarity(dim=-1)
 
 #load model
-
 epsylon = 1e-10
 
 def gram_matrix(input):
@@ -230,14 +229,3 @@ def feature_loss(input, current_model, pretrained_model, beta=1., layer=28,
 
 
     return loss
-
-'''
-pretrained_model = load_feature_extractor(0)
-current_model = models.vgg16().to('cuda:0')
-#print (repr(current_model))
-input = torch.rand(2,3,129,170).to('cuda:0')
-feature_loss(input, current_model, pretrained_model, 0.5)
-'''
-
-
-#prova con iemocap
