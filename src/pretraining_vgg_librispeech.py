@@ -18,7 +18,7 @@ config = loadconfig.load()
 cfg = configparser.ConfigParser()
 cfg.read(config)
 
-pretraining_dataset_path = cfg.get('pretraining', 'pretraining_dataset_path')
+pretraining_dataset_path = '../dataset/matrices/librispeech'
 num_cnn_layers = cfg.getint('pretraining', 'num_cnn_layers')
 preprocessing_ID = cfg.get('pretraining', 'preprocessing_ID')
 sequence_length = cfg.getfloat('pretraining', 'sequence_length')
