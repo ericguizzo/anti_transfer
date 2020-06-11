@@ -16,7 +16,7 @@ FEATURES_TYPE = cfg.get('feature_extraction', 'features_type')
 SR = cfg.getint('sampling', 'sr_target')
 AUGMENTATION = eval(cfg.get('feature_extraction', 'augmentation'))
 NUM_AUG_SAMPLES = eval(cfg.get('feature_extraction', 'num_aug_samples'))
-SEGMENTATION = eval(cfg.get('feature_extraction', 'segmentation'))
+SEGMENTATION = True
 INPUT_IEMOCAP_FOLDER = cfg.get('preprocessing', 'input_iemocap_folder')
 OUTPUT_FOLDER = '../dataset/matrices/iemocap_speaker'
 

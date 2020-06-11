@@ -20,10 +20,7 @@ input_path = cfg.get('preprocessing', 'input_nsynth_folder')
 
 preprocessing_ID = 'reduced'
 max_items = 280000 / 5
-input_path = '../dataset/nsynth'
-#input_path = '/Users/eric/Desktop/nsynth'
 output_path = '../dataset/matrices/nsynth'
-#output_path = '/Users/eric/Desktop/cazzo'
 
 target_feature = 'instrument_family'
 
