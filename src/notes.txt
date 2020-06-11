@@ -1,0 +1,12 @@
+TRAINING ALLOCATION
+
+
+
+
+
+
+
+TO BE SAID
+
+feature maps tend to gain a higher value
+therefore i put sigmoid 
