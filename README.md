@@ -77,7 +77,7 @@ Depending on the used GPU, it may be necessary to modify the batch_size variable
 ## TRAIN MODELS
 When all pre-trainings are completed, run the actual trainings to obtain the results exposed in the original paper. The experiments_antitransfer folder contains all configuration files for the experiments to run. Each configuration file contains several single training instances. The file naming describes each configuration: ID_training-dataset_split-type_pretraining-dataset
 * ID 1-4 are the baseline. Here no anti-transfer nor weight initialization is applied. We compute 20 times all baseline experiments to look at random fluctuations.
-* In ID 10-17  weight-initialization, but no anti-transfer is applied. We compute 3 times each configuration to look at random fluctuations.
+* In ID 10-17  weight initialization, but no anti-transfer is applied. We compute 3 times each configuration to look at random fluctuations.
 * In ID 20-27 we apply anti-transfer learning (and no weight initialization). Each configuration is tested computing the anti-transfer loss in each of the 13 convolution layers of the VGG16 networks.
 
 To run these experiments use the experiments_manager.py script inside the ipython environment, applying the following positional parameters:
