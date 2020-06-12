@@ -19,7 +19,7 @@ We used these exact packages versions:
 * xlswriter 1.1.8
 * configparser 2.19
 
-To install everything at one please run:
+To install everything at once please run:
 
 ```bash
 pip install -r requirements.txt
