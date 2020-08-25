@@ -261,3 +261,7 @@ def onehot(value, range):
     one_hot[value] = 1
 
     return one_hot
+
+
+def reduce_gsc_dataset(input_path, n_samps_per_class):
+    pass

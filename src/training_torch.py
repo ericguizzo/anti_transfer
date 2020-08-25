@@ -130,12 +130,20 @@ at_librispeech_model_path = cfg.get('training_defaults', 'at_librispeech_model_p
 at_iemocap_model_path = cfg.get('training_defaults', 'at_iemocap_model_path')
 at_nsynth_model_path = cfg.get('training_defaults', 'at_nsynth_model_path')
 at_goodsounds_model_path = cfg.get('training_defaults', 'at_goodsounds_model_path')
+at_noisyspeech_model_path = cfg.get('training_defaults', 'at_noisyspeech_model_path')
+at_iemocap_1sec_model_path = cfg.get('training_defaults', 'at_iemocap_1sec_model_path')
+at_gsc_preiemo_model_path = cfg.get('training_defaults', 'at_gsc_preiemo_model_path')
+at_gsc_prenoisy_model_path = cfg.get('training_defaults', 'at_gsc_prenoisy_model_path')
+at_morphomnist_morpholabel_path = cfg.get('training_defaults', 'at_morphomnist_morpholabel_path')
 
 pretraining_classes_librispeech = cfg.get('training_defaults', 'pretraining_classes_librispeech')
 pretraining_classes_iemocap = cfg.get('training_defaults', 'pretraining_classes_iemocap')
 pretraining_classes_nsynth = cfg.get('training_defaults', 'pretraining_classes_nsynth')
 pretraining_classes_goodsounds = cfg.get('training_defaults', 'pretraining_classes_goodsounds')
-
+pretraining_classes_noisyspeech = cfg.get('training_defaults', 'pretraining_classes_noisyspeech')
+pretraining_classes_iemocap_1sec = cfg.get('training_defaults', 'pretraining_classes_iemocap_1sec')
+pretraining_classes_gsc_prenoisy = cfg.get('training_defaults', 'pretraining_classes_gsc_prenoisy')
+pretraining_classes_morphomnist_morpholabel = cfg.get('training_defaults', 'pretraining_classes_morphomnist_morpholabel')
 
 percs = [train_split, validation_split, test_split]
 
@@ -181,6 +189,21 @@ if anti_transfer:
     if at_dataset == 'goodsounds':
         at_model_url = at_goodsounds_model_path
         at_model_classes = pretraining_classes_goodsounds
+    if at_dataset == 'noisyspeech':
+        at_model_url = at_noisyspeech_model_path
+        at_model_classes = pretraining_classes_noisyspeech
+    if at_dataset == 'iemocap_1sec':
+        at_model_url = at_iemocap_1sec_model_path
+        at_model_classes = pretraining_classes_iemocap_1sec
+    if at_dataset == 'gsc_preiemo':
+        at_model_url = at_gsc_preiemo_model_path
+        at_model_classes = pretraining_classes_gsc_preiemo
+    if at_dataset == 'gsc_prenoisy':
+        at_model_url = at_gsc_prenoisy_model_path
+        at_model_classes = pretraining_classes_gsc_prenoisy
+    if at_dataset == 'morphomnist_morpholabel':
+        at_model_url = at_morphomnist_morpholabel_path
+        at_model_classes = pretraining_classes_morphomnist_morpholabel
 
     pretrained_vgg = feature_loss.load_feature_extractor(gpu_ID, at_model_url, at_model_classes)
 else:
@@ -384,6 +407,16 @@ def main():
             pretrained_path = '../pretraining_vgg/nsynth/6secs/model'
         elif at_pretraining == 'goodsounds':
             pretrained_path = '../pretraining_vgg/goodsounds/first/model'
+        elif at_pretraining == 'noisyspeech':
+            pretrained_path = '../pretraining_vgg/noisyspeech/first/model'
+        elif at_pretraining == 'iemocap_1sec':
+            pretrained_path = '../pretraining_vgg/iemocap_1sec/first/model'
+        elif at_pretraining == 'gsc_preiemo':
+            pretrained_path = '../pretraining_vgg/gsc_preiemo/model'
+        elif at_pretraining == 'gsc_prenoisy':
+            pretrained_path = '../pretraining_vgg/gsc_prenoisy/model'
+        elif at_pretraining == 'morphomnist_morpholabel':
+            pretrained_path = '../pretraining_vgg/morphomnist_morpholabel/first/model'
         print ('PRETRAINING!±!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
         print ('pretraining on: ', pretrained_path)
         model.features.load_state_dict(torch.load(pretrained_path,

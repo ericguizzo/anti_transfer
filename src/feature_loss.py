@@ -228,6 +228,7 @@ def feature_loss(input, current_model, pretrained_model, beta=1., layer=28,
     else:
         raise NameError('wrong distance type selected')
 
+    print ('/curr:', sys.getsizeof(curr_feat), sys.getsizeof(loss))
 
 
     return loss

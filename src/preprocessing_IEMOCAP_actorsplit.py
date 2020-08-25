@@ -182,11 +182,11 @@ def main():
         print (fold_string)
         #get foldable item DIVIDING BY ACTORS. Every session hae 2 actors
         curr_list = filter_actors_IEMOCAP(filtered_list, i)
-
         #preprocess all sounds of the current actor
         #args:1. listof soundpaths of current actor, 2. max file length, 3. function to extract label from filepath
         curr_predictors, curr_target = pre.preprocess_foldable_item(curr_list, max_file_length, get_label_IEMOCAP, True)
         #append preprocessed predictors and target to the dict
+        print (curr_predictors.shape)
         predictors[i] = curr_predictors
         target[i] = curr_target
 

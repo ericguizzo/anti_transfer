@@ -172,7 +172,6 @@ def preprocess_datapoint(input_vector, max_file_length):
         else:
             pad[:len(input_vector)] = input_vector  #zero padding
         input_vector = pad
-
     feats = extract_features(input_vector, FEATURES_TYPE)  #extract features
 
     return feats
@@ -232,6 +231,7 @@ def preprocess_foldable_item(sounds_list, max_file_length, get_label_function, p
 
     predictors = []
     target = []
+    #print(len(sounds_list))
 
     #librosa sr is None if no resampling is required (speed up)
 
@@ -277,12 +277,16 @@ def preprocess_foldable_item(sounds_list, max_file_length, get_label_function, p
                             for i in range(cut_predictors.shape[0]):
                                 predictors.append(cut_predictors[i])
                                 target.append(cut_target[i])
+
                             #print ('Foldable item progress:')
+
         except Exception as e:
             #print ('\r corrupted file found: not added to dataset')
             #print (e)
-            #raise ValueError(e)
-            pass
+            raise ValueError(e)
+            #pass
+
+
 
         index_ += 1
         if print_item_progress:

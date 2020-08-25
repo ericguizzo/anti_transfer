@@ -161,7 +161,7 @@ def main():
     num_foldables = 5
 
     if SEGMENTATION:
-        max_file_length = 1
+        max_file_length = 1 
     else:
         max_file_length=get_max_length_IEMOCAP(filtered_list)  #get longest file in samples
     num_files = len(filtered_list)

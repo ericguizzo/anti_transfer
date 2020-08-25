@@ -12,12 +12,12 @@ gpu_ID = 0
 
 
 global_parameters = ['num_epochs=50', 'learning_rate=0.00005', 'early_stopping=True',
-                    'patience=5', 'choose_optimizer="adam"', 'batch_size=13']
+                    'patience=5', 'choose_optimizer="adam"', 'batch_size=8']
 
 experiments_to_run_folder = 'experiments_antitransfer'
 
-xval_script_parameters = ['experiment_folder="../results"',
-                          'debug_mode=False',
+xval_script_parameters = ['experiment_folder="../visual_experiments"',
+                          'debug_mode=True',
                           'overwrite_results=False',
                           'num_folds=1']
 
